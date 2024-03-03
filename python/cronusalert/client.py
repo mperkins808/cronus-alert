@@ -45,10 +45,3 @@ class CronusAlertClient:
             raise Exception(response.text)
 
         return response
-
-
-# Usage example
-token = "eyJpZCI6ImNsc2Zlb3A1eDAwMDB3NDRubHF1djN5NGkiLCJ2YWx1ZSI6ImFhbGNIMmJ2WUlJbG5HVkVCdzhKVURWcVVxTjBmbHFFb3g4ZlZMazhremI1R05oU05HWkQydVI2SXdHRUFBejgifQ=="
-client = CronusAlertClient(token)
-alert = Alert("Test summary", "Test description", AlertType.FIRING)
-response = client.fire(alert)
