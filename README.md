@@ -55,16 +55,16 @@ go get github.com/mperkins808/cronus-alert/go/pkg/cronusalert
 ```go
 func main() {
 
-	client := cronusalert.NewCronusAlertClient(os.Getenv("CRONUS_API_KEY"))
-	alert := cronusalert.Alert{
-		Summary:     "Issue detected in server",
-		Description: "Failing to read database transactions",
-		Status:      cronusalert.FIRING,
-	}
+  client := cronusalert.NewCronusAlertClient(os.Getenv("CRONUS_API_KEY"))
+  alert := cronusalert.Alert{
+      Summary:     "Issue detected in server",
+      Description: "Failing to read database transactions",
+      Status:      cronusalert.FIRING,
+    }
 
-	err := client.Fire(alert)
+  err := client.Fire(alert)
   if err != nil {
-    // handle error
+      // handle error
   }
 
 }
