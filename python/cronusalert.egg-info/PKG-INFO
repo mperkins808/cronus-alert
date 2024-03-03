@@ -1,3 +1,16 @@
+Metadata-Version: 2.1
+Name: cronusalert
+Version: 0.1.0
+Summary: A Python client for Cronus alerts
+Home-page: https://github.com/mperkins8080/cronus-alert/python/cronusalert
+Author: Mathew Perkins
+Author-email: 57matperkins57@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
 # cronus-alert
 
 The easiest way to get push notifications for events that you define
@@ -68,25 +81,5 @@ func main() {
   }
 
 }
-
-```
-
-## Python
-
-### 1. Install
-
-```bash
-pip install cronusalert
-```
-
-### 2. Example usage
-
-```python
-from cronusalert import client
-
-token = os.environ.get("CRONUS_API_KEY")
-alertClient = client.CronusAlertClient(token)
-alert = client.Alert("Issue detected in server", "Python server is burning down", client.AlertType.FIRING)
-alertClient.fire(alert)
 
 ```
